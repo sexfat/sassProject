@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /*css 註解*/
+h1 {
+  font-size: 48px;
+}
+
 body {
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -10,10 +14,29 @@ body {
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 1100px;
-  background-color: #ffcc89;
+  width: 1200px;
   margin: auto;
+  background-color: #ffcc89;
+}
+
+.aa {
+  font-size: 20px;
+}
+
+.c {
+  font-size: 40px;
+}
+
+.goood {
+  background-color: #a2ff00;
+}
+
+.banners {
+  background-image: url("./images/a.jpg");
+}
+
+.ba {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,37 @@
 /*css 註解*/
 // sass 註解
 $fontSize : 16px; // 數值
-$fontFamily : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; // 字串
+$fontFamily : 'Segoe UI',
+Tahoma,
+Geneva,
+Verdana,
+sans-serif; // 字串
 $basic-color : #f9ffe3; //color
 $basic-bg: blue; // color 
+$margin: 10px auto; //list
+$map-title :(key : value,
+    h1 : 48px,
+    h2 : 36px,
+    span : 12px,
+); //map
 
+$bold : false; //布林值 
+$full : false;
+$null : null ; // null 屬性刪除
+
+
+h1 {
+    font-size: map-get($map-title, h1);
+
+    @if $bold {
+        font-weight: bold;
+    }
+}
 
 
 body {
     font-size: $fontSize;
-    font-family:$fontFamily; 
+    font-family: $fontFamily;
     margin: 0;
     padding: 0;
     color: #ecffa1;
@@ -17,8 +39,64 @@ body {
 }
 
 .wrapper {
-   width: 100%;
-   max-width: 1100px;
-   background-color: #ffcc89;
-   margin: auto;
+    @if $full {
+        width: 100%;
+    }
+
+    @else {
+        width: 1200px;
+        margin: auto;
+    }
+
+    background-color: #ffcc89;
 }
+
+
+//全域變數 vs 區域變數
+
+$a : 10px; //  全域變數
+
+.aa {
+ $a : 20px; //區域變數
+ $b : 30px;
+ font-size: $a;
+}
+
+
+// .b {
+//   font-size: $b; //失效 因為作用域關係
+// }
+
+//權重
+$c :40px;
+$c : 60px !default; 
+
+.c {
+  font-size: $c;
+}
+
+
+//字串轉型
+
+//class
+$class : goood ;
+
+
+.#{$class} {
+  background-color: #a2ff00
+}
+
+//路徑
+$url : images;
+.banners {
+  background-image: url('./#{$url}/a.jpg');
+}
+
+//屬性
+$attr : margin;
+.ba {
+   #{$attr} : 0;
+}
+
+
+
