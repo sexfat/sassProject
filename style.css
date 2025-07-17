@@ -1,0 +1,14 @@
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #ecffa1;
+  background-color: #ffb700;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  background-color: #ffcc89;
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */

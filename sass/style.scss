@@ -1,0 +1,24 @@
+/*css 註解*/
+// sass 註解
+$fontSize : 16px; // 數值
+
+
+
+
+
+
+
+body {
+    font-size: $fontSize;
+    margin: 0;
+    padding: 0;
+    color: #ecffa1;
+    background-color: #ffb700;
+}
+
+.wrapper {
+   width: 100%;
+   max-width: 1100px;
+   background-color: #ffcc89;
+   margin: auto;
+}
