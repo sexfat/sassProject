@@ -1,19 +1,19 @@
 /*css 註解*/
 // sass 註解
 $fontSize : 16px; // 數值
-
-
-
-
+$fontFamily : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; // 字串
+$basic-color : #f9ffe3; //color
+$basic-bg: blue; // color 
 
 
 
 body {
     font-size: $fontSize;
+    font-family:$fontFamily; 
     margin: 0;
     padding: 0;
     color: #ecffa1;
-    background-color: #ffb700;
+    background-color: $basic-bg;
 }
 
 .wrapper {
