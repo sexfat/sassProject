@@ -14,8 +14,7 @@ body {
 }
 
 .wrapper {
-  width: 1200px;
-  margin: auto;
+  width: 100%;
   background-color: #ffcc89;
 }
 
@@ -37,6 +36,51 @@ body {
 
 .ba {
   margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+.container section {
+  width: 1200px;
+  margin: auto;
+}
+.container section h1 {
+  font-size: 48px;
+}
+.container section h1 a {
+  color: #333;
+}
+.container section h1 a:hover {
+  color: red;
+}
+.container section h1 a:before {
+  content: "";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ffbf00;
+}
+header .logo {
+  width: 100px;
+  height: 40px;
+  background-color: #333;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  padding: 10px 20px;
+}
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

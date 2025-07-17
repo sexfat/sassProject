@@ -16,8 +16,8 @@ $map-title :(key : value,
 ); //map
 
 $bold : false; //布林值 
-$full : false;
-$null : null ; // null 屬性刪除
+$full : true;
+$null : null; // null 屬性刪除
 
 
 h1 {
@@ -57,9 +57,9 @@ body {
 $a : 10px; //  全域變數
 
 .aa {
- $a : 20px; //區域變數
- $b : 30px;
- font-size: $a;
+    $a : 20px; //區域變數
+    $b : 30px;
+    font-size: $a;
 }
 
 
@@ -69,34 +69,111 @@ $a : 10px; //  全域變數
 
 //權重
 $c :40px;
-$c : 60px !default; 
+$c : 60px !default;
 
 .c {
-  font-size: $c;
+    font-size: $c;
 }
 
 
 //字串轉型
 
 //class
-$class : goood ;
+$class : goood;
 
 
 .#{$class} {
-  background-color: #a2ff00
+    background-color: #a2ff00
 }
 
 //路徑
 $url : images;
+
 .banners {
-  background-image: url('./#{$url}/a.jpg');
+    background-image: url('./#{$url}/a.jpg');
 }
 
 //屬性
 $attr : margin;
+
 .ba {
-   #{$attr} : 0;
+    #{$attr}: 0;
 }
 
 
 
+
+// nesting
+.container {
+    width: 100%;
+    height: auto;
+
+    section {
+        width: 1200px;
+        margin: auto;
+
+        h1 {
+            font-size: map-get($map-title , h1);
+
+            a {
+                color: #333;
+
+                &:hover {
+                    //偽元素
+                    color: red;
+                }
+
+                &:before {
+                    content: '';
+                }
+            }
+
+        }
+    }
+
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @if $full {
+        width: 100%;
+    }
+
+    @else {
+        width: 1200px;
+        margin: auto;
+
+    }
+
+    background-color: #ffbf00;
+
+    .logo {
+        width: 100px;
+        height: 40px;
+        background-color: #333;
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                padding: 10px 20px;
+
+                a {
+                    color: #333;
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+    }
+
+
+}
