@@ -49,6 +49,8 @@ body {
     }
 
     background-color: #ffcc89;
+
+
 }
 
 
@@ -133,47 +135,46 @@ $attr : margin;
 
 }
 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        @if $full {
+            width: 100%;
+        }
 
-    @if $full {
-        width: 100%;
-    }
+        @else {
+            width: 1200px;
+            margin: auto;
 
-    @else {
-        width: 1200px;
-        margin: auto;
+        }
 
-    }
+        background-color: #ffbf00;
 
-    background-color: #ffbf00;
+        .logo {
+            width: 100px;
+            height: 40px;
+            background-color: #333;
+        }
 
-    .logo {
-        width: 100px;
-        height: 40px;
-        background-color: #333;
-    }
+        nav {
+            ul {
+                list-style: none;
+                display: flex;
 
-    nav {
-        ul {
-            list-style: none;
-            display: flex;
+                li {
+                    padding: 10px 20px;
 
-            li {
-                padding: 10px 20px;
-
-                a {
-                    color: #333;
-                    text-decoration: none;
+                    a {
+                        color: #333;
+                        text-decoration: none;
+                    }
                 }
             }
+
+
         }
 
 
     }
-
-
-}
