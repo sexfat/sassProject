@@ -42,7 +42,7 @@ section.intro {
 }
 
 h1.Maintitle {
-  font-size: 50px;
+  font-size: 100px;
   font-weight: bold;
   width: 100%;
   min-width: 350px;
@@ -51,16 +51,20 @@ h1.Maintitle {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1.Maintitle::before {
-  content: "before";
-  width: 100px;
-  height: 1px;
-  background-color: #ffffff;
+  content: "|";
+  color: #fff;
 }
 h1.Maintitle::after {
-  content: "after";
-  width: 100px;
-  height: 1px;
-  background-color: #ffffff;
+  content: "|";
+  color: #fff;
+}
+
+.card {
+  border-radius: 10px;
+  width: 430px;
+  height: 140px;
+  background-color: #900043;
+  box-shadow: 1px 1px 10px #ffffff;
 }
 
 h1 {

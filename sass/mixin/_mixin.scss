@@ -70,28 +70,45 @@ section.intro {
 // 標題
 
 @mixin title($fontSize) {
-    h1.Maintitle {
-        font-size: $fontSize;
-        font-weight: bold;
-        width: 100%;
-        min-width: 350px;
-        text-align: center;
-        margin: auto;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: $fontSize;
+    font-weight: bold;
+    width: 100%;
+    min-width: 350px;
+    text-align: center;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-        &::before {
-            content: 'before';
-            width: 100px;
-            height: 1px;
-            background-color: #ffffff;
-        }
-        &::after {
-            content: 'after';
-             width: 100px;
-            height: 1px;
-            background-color: #ffffff;
-        }
+    &::before {
+        content: '|';
+        color: #fff;
+    }
+    &::after {
+        content: '|';
+        color: #fff
     }
 }
 
-@include title(50px);
+
+// 標籤寫在外部
+h1.Maintitle {
+    @include title(100px);
+}
+
+// 圓角
+@mixin bordeRadius($w , $h , $b){
+    border-radius: $b;
+    @include rect($w, $h) 
+}
+
+
+.card {
+  @include bordeRadius(430px, 140px, 10px);
+  background-color: #900043;
+  box-shadow: 1px 1px 10px #ffffff;
+
+}
+
+
+
+
+
