@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "sass": "sass sass/style.scss css/style.css --watch",
+    "build": "sass sass/style.scss css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,5 +13,8 @@
   "description": "",
   "dependencies": {
     "bootstrap": "^5.3.7"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
   }
 }

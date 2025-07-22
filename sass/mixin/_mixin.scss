@@ -1,0 +1,97 @@
+//宣告
+@mixin center {
+    margin: auto;
+    width: 400px;
+}
+
+//引用
+.box {
+    @include center;
+    height: 300px;
+    background-color: #ff0000;
+}
+
+
+.box1 {
+    @include center;
+    height: 700px;
+    background-color: #00d5ff;
+}
+
+//變數 宣告方式
+@mixin model-center($w) {
+    margin: auto;
+    width: $w;
+}
+
+.box2 {
+    @include model-center(700px);
+    height: 300px;
+    background-color: #900043;
+}
+
+//layout ->預設值
+@mixin layout($w , $bgc: #fff) {
+
+    //滿版 
+    @if $w ==100 {
+        width: 100%;
+        height: auto;
+    }
+
+    @else if $w < 100 {
+        width: $w * 1%;
+        margin: auto;
+    }
+
+    @else {
+        //固定寬
+        @include model-center($w)
+    }
+
+    background-color: $bgc;
+}
+
+section.intro {
+    @include layout(90, #333);
+    height: 400px;
+}
+
+// 形狀
+@mixin rect($w , $h: $w) {
+    width: $w;
+    height: $h;
+}
+
+.box4 {
+    @include rect(600px);
+}
+
+// 標題
+
+@mixin title($fontSize) {
+    h1.Maintitle {
+        font-size: $fontSize;
+        font-weight: bold;
+        width: 100%;
+        min-width: 350px;
+        text-align: center;
+        margin: auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        &::before {
+            content: 'before';
+            width: 100px;
+            height: 1px;
+            background-color: #ffffff;
+        }
+        &::after {
+            content: 'after';
+             width: 100px;
+            height: 1px;
+            background-color: #ffffff;
+        }
+    }
+}
+
+@include title(50px);

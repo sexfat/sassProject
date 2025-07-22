@@ -4,26 +4,6 @@
     height: auto;
 
     section {
-        width: 1200px;
-        margin: auto;
-
-        h1 {
-            font-size: map-get($map-title , h1);
-
-            a {
-                color: #333;
-
-                &:hover {
-                    //偽元素
-                    color: red;
-                }
-
-                &:before {
-                    content: '';
-                }
-            }
-
-        }
     }
 
 }
