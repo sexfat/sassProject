@@ -58,6 +58,18 @@ h1.Maintitle::after {
   content: "|";
   color: #fff;
 }
+@media screen and (max-width: 996px) {
+  h1.Maintitle {
+    font-size: 60px;
+    color: #fff3f3;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1.Maintitle {
+    font-size: 40px;
+    color: #00d2d2;
+  }
+}
 
 .card {
   border-radius: 10px;
@@ -65,6 +77,18 @@ h1.Maintitle::after {
   height: 140px;
   background-color: #900043;
   box-shadow: 1px 1px 10px #ffffff;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    background-color: #fed400;
+    width: 100%;
+  }
+}
+
+.test {
+  padding: 10px;
+  text-align: center;
 }
 
 h1 {

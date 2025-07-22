@@ -1,3 +1,23 @@
+//手機板
+@mixin m() {
+    @media screen and (max-width : $m) {
+        @content;
+    }
+}
+
+
+//平板
+@mixin t() {
+    @media screen and (max-width : $t) {
+        @content;
+    }
+}
+
+
+
+
+
+
 //宣告
 @mixin center {
     margin: auto;
@@ -82,6 +102,7 @@ section.intro {
         content: '|';
         color: #fff;
     }
+
     &::after {
         content: '|';
         color: #fff
@@ -92,23 +113,44 @@ section.intro {
 // 標籤寫在外部
 h1.Maintitle {
     @include title(100px);
+    //平板
+    @include t() {
+        font-size: 60px;
+        color: #fff3f3
+    }
+    //手機
+    @include m() {
+        font-size: 40px;
+        color: #00d2d2
+    }
+
 }
 
 // 圓角
-@mixin bordeRadius($w , $h , $b){
+@mixin bordeRadius($w , $h , $b) {
     border-radius: $b;
-    @include rect($w, $h) 
+    @include rect($w, $h)
 }
 
 
 .card {
-  @include bordeRadius(430px, 140px, 10px);
-  background-color: #900043;
-  box-shadow: 1px 1px 10px #ffffff;
+    @include bordeRadius(430px, 140px, 10px);
+    background-color: #900043;
+    box-shadow: 1px 1px 10px #ffffff;
+    margin: auto;
 
+    @include m() {
+        background-color: #fed400;
+        width: 100%;
+    }
+}
+
+@mixin a() {
+    padding: 10px;
+    text-align: center;
 }
 
 
-
-
-
+.test {
+    @include a();
+}
