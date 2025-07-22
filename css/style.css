@@ -58,6 +58,12 @@ h1.Maintitle::after {
   content: "|";
   color: #fff;
 }
+@media screen and (max-width: 1024px) {
+  h1.Maintitle {
+    font-size: 80px;
+    color: #fed400;
+  }
+}
 @media screen and (max-width: 996px) {
   h1.Maintitle {
     font-size: 60px;
@@ -89,6 +95,28 @@ h1.Maintitle::after {
 .test {
   padding: 10px;
   text-align: center;
+}
+
+.btn {
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.btn--primary {
+  background-color: #ff6a00;
+  color: #fff;
+}
+.btn--primary:hover {
+  background-color: rgb(204, 84.8, 0);
+}
+.btn--xl {
+  padding: 12px 30px;
+}
+.btn--round {
+  border-radius: 30px;
 }
 
 h1 {

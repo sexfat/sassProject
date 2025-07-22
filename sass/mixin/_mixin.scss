@@ -5,10 +5,16 @@
     }
 }
 
-
 //平板
 @mixin t() {
     @media screen and (max-width : $t) {
+        @content;
+    }
+}
+
+//自訂義
+@mixin c($c){
+    @media screen and (max-width : $c) {
         @content;
     }
 }
@@ -113,6 +119,13 @@ section.intro {
 // 標籤寫在外部
 h1.Maintitle {
     @include title(100px);
+    // 自訂
+    @include c(1024px){
+      font-size: 80px;
+      color:#fed400;
+
+    } 
+
     //平板
     @include t() {
         font-size: 60px;

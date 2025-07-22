@@ -1,0 +1,32 @@
+@mixin btn($bgc , $color:#333) {
+    .btn {
+        border-radius: 8px;
+        text-align: center;
+        padding: 8px;
+        color: $color;
+        cursor: pointer;
+        transition: .3s all ease;
+
+        // 顏色
+        &--primary {
+            background-color: $bgc;
+            color: #fff;
+
+            &:hover {
+            background-color: darken($bgc,  10) //顏色內建函式
+            }
+        }
+
+        // 尺寸
+        &--xl {
+            padding: 12px 30px;
+        }
+
+        // 形狀
+        &--round {
+            border-radius: 30px;
+        }
+    }
+}
+
+@include btn(#ff6a00);
