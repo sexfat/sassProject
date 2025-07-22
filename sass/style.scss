@@ -29,7 +29,12 @@
 
 
 
+//單位
+.w {
+    width: 10 + 10 + px;
+    height: 100em - 20;
+    padding: 10px * 10;
+    font: ceil(40 / 24) + px;
+}
 
-
-
-
+// ceil 無條件進位 / round 四捨五入 / floor 無條件捨去 

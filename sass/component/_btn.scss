@@ -34,7 +34,6 @@
 
 @mixin btnStyle($style ,$bgc, $color:#333 , $borderRadius: 10px , $size:default) {
     .btn-#{$style} {
-        border-radius: 8px;
         text-align: center;
         color: #333;
         cursor: pointer;
