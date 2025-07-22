@@ -1,0 +1,20 @@
+/*css 註解*/
+// sass 註解
+$fontSize : 16px; // 數值
+$fontFamily : 'Segoe UI',
+Tahoma,
+Geneva,
+Verdana,
+sans-serif; // 字串
+$basic-color : #f9ffe3; //color
+$basic-bg: blue; // color 
+$margin: 10px auto; //list
+$map-title :(key : value,
+    h1 : 48px,
+    h2 : 36px,
+    span : 12px,
+); //map
+
+$bold : false; //布林值 
+$full : true;
+$null : null; // null 屬性刪除

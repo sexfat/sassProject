@@ -1,0 +1,6 @@
+//路徑
+$url : images;
+
+.banners {
+    background-image: url('./#{$url}/a.jpg');
+}

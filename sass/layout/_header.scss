@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @if $full {
+        width: 100%;
+    }
+
+    @else {
+        width: 1200px;
+        margin: auto;
+    }
+
+    background-color: #ffbf00;
+
+    .logo {
+        width: 100px;
+        height: 40px;
+        background-color: #333;
+    }
+    // 選單
+    @import 'nav';
+    
+    //登入
+    @import 'login';
+}

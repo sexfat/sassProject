@@ -1,0 +1,44 @@
+// nesting
+.container {
+    width: 100%;
+    height: auto;
+
+    section {
+        width: 1200px;
+        margin: auto;
+
+        h1 {
+            font-size: map-get($map-title , h1);
+
+            a {
+                color: #333;
+
+                &:hover {
+                    //偽元素
+                    color: red;
+                }
+
+                &:before {
+                    content: '';
+                }
+            }
+
+        }
+    }
+
+}
+
+.wrapper {
+    @if $full {
+        width: 100%;
+    }
+
+    @else {
+        width: 1200px;
+        margin: auto;
+    }
+
+    background-color: #ffcc89;
+
+
+}

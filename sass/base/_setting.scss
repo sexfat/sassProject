@@ -1,0 +1,23 @@
+//全域變數 vs 區域變數
+
+$a : 10px; //  全域變數
+
+.aa {
+    $a : 20px; //區域變數
+    $b : 30px;
+    font-size: $a;
+}
+
+
+// .b {
+//   font-size: $b; //失效 因為作用域關係
+// }
+
+//權重
+$c :40px;
+$c : 60px !default;
+
+.c {
+    font-size: $c;
+}
+

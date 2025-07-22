@@ -1,0 +1,11 @@
+// 匯入所有 Sass 部分檔案
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/button';
+@import 'components/card';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'pages/home';
+@import 'pages/about';
+@import 'utils/variables';
+@import 'utils/mixins';

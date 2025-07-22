@@ -1,180 +1,37 @@
-/*css 註解*/
-// sass 註解
-$fontSize : 16px; // 數值
-$fontFamily : 'Segoe UI',
-Tahoma,
-Geneva,
-Verdana,
-sans-serif; // 字串
-$basic-color : #f9ffe3; //color
-$basic-bg: blue; // color 
-$margin: 10px auto; //list
-$map-title :(key : value,
-    h1 : 48px,
-    h2 : 36px,
-    span : 12px,
-); //map
+// @import url('path/a.css'); css import
+// 共用設定
+@import 'var';
+@import 'base/setting';
+@import 'base/color';
+@import 'base/font';
 
-$bold : false; //布林值 
-$full : true;
-$null : null; // null 屬性刪除
+// 複用樣式 mixin
+@import 'mixin/mixin';
 
 
-h1 {
-    font-size: map-get($map-title, h1);
+//  組件component
+@import 'component/btn';
+@import 'component/card';
+@import 'component/title';
 
-    @if $bold {
-        font-weight: bold;
-    }
-}
+// layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/login';
+@import 'layout/body';
+@import 'layout/banner';
 
+// page
+@import 'page/index';
+@import 'page/product';
 
-body {
-    font-size: $fontSize;
-    font-family: $fontFamily;
-    margin: 0;
-    padding: 0;
-    color: #ecffa1;
-    background-color: $basic-bg;
-}
+// plugin
 
-.wrapper {
-    @if $full {
-        width: 100%;
-    }
-
-    @else {
-        width: 1200px;
-        margin: auto;
-    }
-
-    background-color: #ffcc89;
-
-
-}
-
-
-//全域變數 vs 區域變數
-
-$a : 10px; //  全域變數
-
-.aa {
-    $a : 20px; //區域變數
-    $b : 30px;
-    font-size: $a;
-}
-
-
-// .b {
-//   font-size: $b; //失效 因為作用域關係
-// }
-
-//權重
-$c :40px;
-$c : 60px !default;
-
-.c {
-    font-size: $c;
-}
-
-
-//字串轉型
-
-//class
-$class : goood;
-
-
-.#{$class} {
-    background-color: #a2ff00
-}
-
-//路徑
-$url : images;
-
-.banners {
-    background-image: url('./#{$url}/a.jpg');
-}
-
-//屬性
-$attr : margin;
-
-.ba {
-    #{$attr}: 0;
-}
+@import 'plugin/swiper';
 
 
 
 
-// nesting
-.container {
-    width: 100%;
-    height: auto;
-
-    section {
-        width: 1200px;
-        margin: auto;
-
-        h1 {
-            font-size: map-get($map-title , h1);
-
-            a {
-                color: #333;
-
-                &:hover {
-                    //偽元素
-                    color: red;
-                }
-
-                &:before {
-                    content: '';
-                }
-            }
-
-        }
-    }
-
-}
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @if $full {
-            width: 100%;
-        }
-
-        @else {
-            width: 1200px;
-            margin: auto;
-
-        }
-
-        background-color: #ffbf00;
-
-        .logo {
-            width: 100px;
-            height: 40px;
-            background-color: #333;
-        }
-
-        nav {
-            ul {
-                list-style: none;
-                display: flex;
-
-                li {
-                    padding: 10px 20px;
-
-                    a {
-                        color: #333;
-                        text-decoration: none;
-                    }
-                }
-            }
 
 
-        }
 
-
-    }

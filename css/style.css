@@ -1,23 +1,5 @@
 @charset "UTF-8";
 /*css 註解*/
-h1 {
-  font-size: 48px;
-}
-
-body {
-  font-size: 16px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #ecffa1;
-  background-color: blue;
-}
-
-.wrapper {
-  width: 100%;
-  background-color: #ffcc89;
-}
-
 .aa {
   font-size: 20px;
 }
@@ -26,37 +8,8 @@ body {
   font-size: 40px;
 }
 
-.goood {
-  background-color: #a2ff00;
-}
-
-.banners {
-  background-image: url("./images/a.jpg");
-}
-
-.ba {
-  margin: 0;
-}
-
-.container {
-  width: 100%;
-  height: auto;
-}
-.container section {
-  width: 1200px;
-  margin: auto;
-}
-.container section h1 {
+h1 {
   font-size: 48px;
-}
-.container section h1 a {
-  color: #333;
-}
-.container section h1 a:hover {
-  color: red;
-}
-.container section h1 a:before {
-  content: "";
 }
 
 header {
@@ -81,6 +34,69 @@ header nav ul li {
 header nav ul li a {
   color: #333;
   text-decoration: none;
+}
+header .login {
+  display: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  background-color: #f2f2f2;
+}
+
+.login {
+  display: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ecffa1;
+  background-color: blue;
+}
+
+.goood {
+  background-color: #a2ff00;
+}
+
+.ba {
+  margin: 0;
+}
+
+.banners {
+  background-image: url("./images/a.jpg");
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+.container section {
+  width: 1200px;
+  margin: auto;
+}
+.container section h1 {
+  font-size: 48px;
+}
+.container section h1 a {
+  color: #333;
+}
+.container section h1 a:hover {
+  color: red;
+}
+.container section h1 a:before {
+  content: "";
+}
+
+.wrapper {
+  width: 100%;
+  background-color: #ffcc89;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+body {
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    margin: 0;
+    padding: 0;
+    color: #ecffa1;
+    background-color: $basic-bg;
+}
+
+//字串轉型
+
+//class
+$class : goood;
+
+
+.#{$class} {
+    background-color: #a2ff00
+}
+
+
+
+//屬性
+$attr : margin;
+
+.ba {
+    #{$attr}: 0;
+}
+
+

@@ -1,0 +1,7 @@
+h1 {
+    font-size: map-get($map-title, h1);
+
+    @if $bold {
+        font-weight: bold;
+    }
+}
