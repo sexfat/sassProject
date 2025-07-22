@@ -1,4 +1,4 @@
-@mixin btn($bgc , $color:#333) {
+@mixin btn($bgc , $color: #333) {
     .btn {
         border-radius: 8px;
         text-align: center;
@@ -13,9 +13,10 @@
             color: #fff;
 
             &:hover {
-            background-color: darken($bgc,  10) //顏色內建函式
+                background-color: darken($bgc, 10) //顏色內建函式
             }
         }
+
         // 尺寸
         &--xl {
             padding: 12px 30px;
@@ -29,3 +30,38 @@
 }
 
 @include btn(#ff6a00);
+
+
+@mixin btnStyle($style ,$bgc, $color:#333 , $borderRadius: 10px , $size:default) {
+    .btn-#{$style} {
+        border-radius: 8px;
+        text-align: center;
+        color: #333;
+        cursor: pointer;
+        transition: .3s all ease;
+        //尺寸
+        @if $size == xl {
+            width: 230px;
+            padding: 14px;
+        }@else if $size == default {
+            width: 180px;
+            padding: 10px;
+        }@else if $size == sm {
+                width: 180px;
+                padding : 8px;
+        } 
+        //顏色
+        background-color: $bgc;
+        &:hover {
+           background-color: darken($bgc, 15);
+        }
+        @if $borderRadius {
+           border-radius: $borderRadius;
+
+        }
+    }
+}
+
+
+@include btnStyle(default , #ff7300 ,#f4f4f4 , 10px);
+@include btnStyle(primary , #008cff ,#ffffff , 10px);
