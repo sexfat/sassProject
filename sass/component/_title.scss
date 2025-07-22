@@ -5,3 +5,29 @@ h1 {
         font-weight: bold;
     }
 }
+
+
+h1 {
+    font-size: $baseFontSize * 5;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: $baseFontSize * 4;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: $baseFontSize * 3;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: $baseFontSize * 2;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: $baseFontSize * 1.5;
+    font-weight: 700;
+}

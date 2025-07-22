@@ -28,7 +28,7 @@
 @import 'plugin/swiper';
 
 
-
+// ceil 無條件進位 / round 四捨五入 / floor 無條件捨去 
 //單位
 .w {
     width: 10 + 10 + px;
@@ -37,4 +37,20 @@
     font: ceil(40 / 24) + px;
 }
 
-// ceil 無條件進位 / round 四捨五入 / floor 無條件捨去 
+@for $i from 1 through 10  {
+  .space-#{$i}{
+       margin-top: $i +px;
+  }
+}
+
+
+
+@for $i from 1 through 10 {
+  .bar#{$i} {
+     background-color: lighten(#000000,  $i* 10);
+     width: 300px;
+     height: 60px;
+  }
+}
+
+
